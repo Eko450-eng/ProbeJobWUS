@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/main.css" type="text/css" media="screen" />
+        <title>Nike</title>
+        <script src="https://kit.fontawesome.com/0e3e18d141.js" crossorigin="anonymous"></script>
+    </head>
+
+    <!-- Just for the hambuger bar -->
+    <script type="text/javascript">
+        const openMenu = () =>{
+            const topBar = document.getElementById('topBar')
+            const centerBar = document.getElementById('centerBar')
+            const bottomBar = document.getElementById('bottomBar')
+            const navigation = document.getElementById('navigation')
+            const toggle = (open) => {
+                centerBar.style.opacity = open ? 1 : 0
+                topBar.style.transform = open ? "rotate(0deg)" : "rotate(45deg)"
+                bottomBar.style.transform = open ? "rotate(0deg)" : "rotate(-45deg)"
+                topBar.style.top = open ? "0rem" : ".5rem"
+                bottomBar.style.top = open ?".6rem" : ".5rem"
+                navigation.style.transform = open ? "scale(0)" : "scale(1)"
+            }
+            if(centerBar.style.opacity == 0 && centerBar.style.opacity != ""){
+                toggle(true)
+            }else{
+                toggle(false)
+            }
+      }
+    </script>
+
+    <body>
+        <div class="background-wrapper">
+            <img class="shoe-top" src="./styles/probejob-wus/images/shoeTopView.png" alt="An orange shoe viewed from a top down angle">
+            <img class="shoe-bottom" src="./styles/probejob-wus/images/shoeBottomView.png" alt="An orange shoe on its headviewed from a top down angle">
+        </div>
+        <div class="navbar">
+            <img class="logo" src="./styles/svgs/Logo_NIKE.svg" alt="A swoosh like logo of the company">
+            <nav id="navigation">
+                    <ul>
+                        <li class="link-wrapper"><a href="#" class="link">Whats new</li></a>
+                        <li class="link-wrapper"><a href="#" class="link active">Men</li></a>
+                        <li class="link-wrapper"><a href="#" class="link">Women</li></a>
+                        <li class="link-wrapper"><a href="#" class="link">Kids</li></a>
+                        <li class="link-wrapper"><a href="#" class="link">Personalize</li></a>
+                        <li class="link-wrapper"><a href="#" class="link">Collections</li></a>
+                        <li class="link-wrapper"><a href="#" class="link">Sales</li></a>
+                        <li class="link-wrapper"><a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"><input alt="A search field" class="search-field" placeholder="Search"/></i></li></a>
+                    </ul>
+            </nav>
+            <li><i class="fa-solid fa-cart-shopping" alt="Your cart"></i></li>
+            <button onclick="openMenu()" class="hamburger-wrapper">
+                <div>
+                    <div id="topBar" class="top-bar"></div>
+                    <div id="centerBar" class="center-bar"></div>
+                    <div id="bottomBar" class="bottom-bar"></div>
+                </div>
+            </button>
+        </div>
+        <section class="main">
+            <div class="heading">
+                <h1>Feel strong</h1>
+                <h1>like Lebron</h1>
+            </div>
+            <div class="subheading">
+                    <p>The LeBron 17 LMTD features a large Max Air unit in the heel and Zoom Air cushioning for extra comfort. </p>
+                    <p>Knit material wraps your feet for lightweight support so you can make quick, powerful moves like a champ.</p>
+            </div>
+            <div class="actions">
+                    <i class="fa-solid fa-circle-info" alt="An information button"></i>
+                    <i class="fa-solid fa-truck" alt="A delivery truck that indicates a delivery option"></i>
+                    <span>4,7<i class="fa-solid fa-star" alt="A star indicating the quality of likes this product has received"></i></span>
+            </div>
+            <div class="basket">
+                    <div class="select-wrapper">
+                        <select>
+                            <option value="43" id="EUSize43">EU 43</option>
+                            <option value="44" id="EUSize44">EU 44</option>
+                            <option value="45" id="EUSize45">EU 45</option>
+                            <option value="46" id="EUSize46">EU 46</option>
+                            <option value="47" id="EUSize47">EU 47</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn"><div class="button-shadow"><h4>Add to basket</h4></div></button>
+                        <h3>$249</h3>
+                    </div>
+            </div>
+        </section>
+
+    </body>
+</html>
