@@ -15,7 +15,7 @@ body {
   font-size: clamp(16px, 80%, 2rem);
   height: 100vh;
   width: 100%;
-  background: #FAFAFA;
+  background: white;
 }
 
 .navbar {
@@ -25,7 +25,6 @@ body {
   display: flex;
   align-items: center;
   margin: 1em auto;
-  justify-content: space-around;
   z-index: 2;
 }
 .navbar nav {
@@ -39,7 +38,7 @@ body {
   opacity: 1;
   transform: scale(1);
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .navbar nav {
     transform: scale(0);
     position: absolute;
@@ -283,7 +282,7 @@ select {
 .hamburger-wrapper .top-bar {
   top: 0;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .hamburger-wrapper {
     display: unset;
   }
